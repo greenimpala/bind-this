@@ -1,8 +1,8 @@
 {
-  "name": "bindThis",
+  "name": "bind-this",
   "version": "0.0.1",
   "description": "Function scope binding with partial application.",
-  "main": "bindThis.js",
+  "main": "bind-this.js",
   "scripts": {
     "test": "node test.js"
   },

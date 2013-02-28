@@ -1,5 +1,5 @@
 var assert = require('assert');
-var bindThis = require('./bindThis');
+var bindThis = require('./bind-this');
 
 test('binds to a given context', function () {
 	var func = function () {
