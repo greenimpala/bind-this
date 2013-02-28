@@ -23,12 +23,14 @@ test('can partially apply function', function () {
 	assert.equal(args[1], 'bar');
 });
 
-test('binds to \'this\' implicitly if no context given', function () {
+test('binds to global object if no context given', function () {
 	var func = function () {
 		return this.foo;
 	};
 
-	var bound = bindThis.call({ foo: 'bar' }, func); // Fake the context
+	global.foo = 'bar';
+
+	var bound = bindThis(func);
 
 	assert.equal(bound(), 'bar');
 });

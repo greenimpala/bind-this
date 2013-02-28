@@ -15,7 +15,7 @@ var bindThis = function (context, fn) {
 	if (typeof context === 'function') {
 		partialArgs = slice(arguments, 1);
 		fn = context;
-		context = this;
+		context = global;
 	} else {
 		partialArgs = slice(arguments, 2);
 	}
