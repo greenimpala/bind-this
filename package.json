@@ -1,0 +1,12 @@
+{
+  "name": "bindThis",
+  "version": "0.0.1",
+  "description": "Function scope binding with partial application.",
+  "main": "bindThis.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": "",
+  "author": "@st3redstripe",
+  "license": "BSD"
+}
