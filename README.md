@@ -4,10 +4,10 @@ Function scope binding with partial application.
 
 ## Usage
 
-Require the module.
+Require the module. Available on `npm` as `bind-this`.
 
 ```js
-var bindThis = require('bindThis');
+var bindThis = require('bind-this');
 ```
 
 ### Binding
