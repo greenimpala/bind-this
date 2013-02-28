@@ -35,7 +35,7 @@ var parseRadixTen = bind(this, 'parseInt', null, 10);
 
 ### Partial Application
 
-Any further arguments will be used to partially apply the function. Pass `null` to 'skip' a parameter.
+Any further arguments will be used to partially apply the function. Pass `null` to 'skip' a parameter. Any skipped parameters will be filled from left to right using the values passed to the bound function when executed.
 
 ```js
 var append = function (str, append) {
