@@ -1,4 +1,4 @@
-# bindThis
+# bind-this
 
 Function scope binding with partial application.
 
