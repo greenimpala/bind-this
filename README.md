@@ -28,11 +28,13 @@ bound.call({}); // 'bar'
 Pass a scope to scope to override the default context.
 
 ```js
-var bound = bind({ foo: 'bar' }, function () {
+this.foo = 'bar';
+
+var bound = bind({ foo: 'baz' }, function () {
 	return this.foo;
 });
 
-bound(); // 'bar'
+bound(); // 'baz'
 ```
 
 Pass a string instead of of a function to resolve the function from the context.
