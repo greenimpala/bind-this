@@ -12,7 +12,7 @@ var bind = require('bind-this');
 
 ### Binding
 
-Pass a function bind to the immediate scope.
+In most cases you will want to bind to the immediate scope, passing a function will return a new function bound to the current `this` value.
 
 ```js
 this.foo = 'bar';
@@ -21,7 +21,8 @@ var bound = bind(function () {
 	return this.foo;
 });
 
-bound(); // 'bar'
+// Try and 'override' the context
+bound.call({}); // 'bar'
 ```
 
 Pass a scope to scope to override the default context.
