@@ -7,7 +7,7 @@ Function scope binding with partial application.
 Require the module. Available on `npm` as `bind-this`.
 
 ```js
-var bindThis = require('bind-this');
+var bind = require('bind-this');
 ```
 
 ### Binding
@@ -17,7 +17,7 @@ Pass a function bind to the immediate scope.
 ```js
 this.foo = 'bar';
 
-var bound = bindThis(function () {
+var bound = bind(function () {
 	return this.foo;
 });
 
@@ -27,7 +27,7 @@ bound(); // 'bar'
 Pass a scope to scope to override the default context.
 
 ```js
-var bound = bindThis({ foo: 'bar' }, function () {
+var bound = bind({ foo: 'bar' }, function () {
 	return this.foo;
 });
 
@@ -37,7 +37,7 @@ bound(); // 'bar'
 Pass a string instead of of a function to resolve the function from the context.
 
 ```js
-var parseRadixTen = bindThis('parseInt', null, 10);
+var parseRadixTen = bind('parseInt', null, 10);
 ```
 
 ### Partial Application
@@ -49,7 +49,7 @@ var append = function (str, append) {
 	return str + append;
 };
 
-var appendBar = bindThis(append, null, 'bar');
+var appendBar = bind(append, null, 'bar');
 
 appendBar('foo'); // 'foobar'
 ```
