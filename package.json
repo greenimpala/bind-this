@@ -1,12 +1,15 @@
 {
   "name": "bind-this",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Function scope binding with partial application.",
   "main": "bind-this.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test"
   },
   "repository": "https://github.com/st3redstripe/bindThis",
   "author": "@st3redstripe",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "tiny-runner": "0.0.2"
+  }
 }

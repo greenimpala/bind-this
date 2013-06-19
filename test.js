@@ -1,5 +1,6 @@
 var assert = require('assert');
 var bindThis = require('./bind-this');
+var test = require('tiny-runner');
 
 test('binds to a given context', function () {
 	var func = function () {
@@ -83,11 +84,3 @@ test('can bind all functions', function () {
 	assert.equal(context.one.call({}), 'bar');
 	assert.equal(context.two.call({}), 'bar');
 });
-
-/* Test runner */
-function test (name, fn) {
-	var thrown, red = '\x1B[31m', green = '\x1B[32m', white = '\x1B[37m';
-	try { fn(); } catch (e) { thrown = e; }
-	console.log((thrown ? red + '✖ Failed: ' : green + '✓ Passed: ') + white + name);
-	if (thrown) console.log('\n\u0009' + thrown + '\n');
-}
