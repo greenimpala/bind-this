@@ -1,8 +1,8 @@
 var assert = require('assert');
 var bindThis = require('./bind-this');
-var test = require('tiny-runner');
+var runner = require('tiny-runner');
 
-test('binds to a given context', function () {
+it('binds to a given context', function () {
 	var func = function () {
 		return this.foo;
 	};
@@ -12,7 +12,7 @@ test('binds to a given context', function () {
 	assert.equal(bound(), 'bar');
 });
 
-test('can partially apply function', function () {
+it('can partially apply function', function () {
 	var func = function () {
 		return arguments;
 	};
@@ -24,7 +24,7 @@ test('can partially apply function', function () {
 	assert.equal(args[1], 'bar');
 });
 
-test('binds to global object if no context given', function () {
+it('binds to global object if no context given', function () {
 	var func = function () {
 		return this.foo;
 	};
@@ -36,7 +36,7 @@ test('binds to global object if no context given', function () {
 	assert.equal(bound(), 'bar');
 });
 
-test('can partially apply when no context given', function () {
+it('can partially apply when no context given', function () {
 	var func = function () {
 		return arguments;
 	};
@@ -48,7 +48,7 @@ test('can partially apply when no context given', function () {
 	assert.equal(args[1], 'bar');
 });
 
-test('resolve function from context when string given', function () {
+it('resolve function from context when string given', function () {
 	var context = {
 		foo: function () {
 			return 'bar';
@@ -60,7 +60,7 @@ test('resolve function from context when string given', function () {
 	assert.equal(bound(), 'bar');
 });
 
-test('can skip parameters with null when partially applying', function () {
+it('can skip parameters with null when partially applying', function () {
 	var bound = bindThis(function () {
 		return arguments;
 	}, null, 'foo');
@@ -71,7 +71,7 @@ test('can skip parameters with null when partially applying', function () {
 	assert.equal(args[1], 'foo');
 });
 
-test('can bind all functions', function () {
+it('can bind all functions', function () {
 	var context = {
 		foo: 'bar',
 		one: function () { return this.foo; },

@@ -1,6 +1,6 @@
 {
   "name": "bind-this",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Function scope binding with partial application.",
   "main": "bind-this.js",
   "scripts": {
@@ -10,6 +10,6 @@
   "author": "@st3redstripe",
   "license": "BSD",
   "devDependencies": {
-    "tiny-runner": "0.0.2"
+    "tiny-runner": "0.0.3"
   }
 }
